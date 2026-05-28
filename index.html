@@ -449,7 +449,9 @@ var PAL=['#1a6fd4','#08c8d0','#0db87a','#f09030','#e03030','#7c50d8','#e06018','
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 window.onload=function(){
-  var saved=localStorage.getItem('evar-url-v5');
+  var FIXED_URL='https://script.google.com/macros/s/AKfycby8VcImwtVga9jJy2cT0jf5nP79QT1_tNTrHtAJLb2cq1frwe42HBJbZxaLSE1YVNm7BA/exec';
+  localStorage.setItem('evar-url-v5', FIXED_URL);
+  var saved=FIXED_URL;
   var type=localStorage.getItem('evar-type-v5')||'sheets';
   if(saved){
     apiUrl=saved;backendType=type;
